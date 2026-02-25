@@ -64,13 +64,13 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: thumama/nodeapp:${{ github.sha }}
+          tags: thumama610/nodeapp:${{ github.sha }}
           push: false
       
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@0.20.0
         with:
-          image-ref: thumama/nodeapp:${{ github.sha }}
+          image-ref: thumama610/nodeapp:${{ github.sha }}
           format: table
       #    exit-code: 1
       #    severity: CRITICAL,HIGH
@@ -87,7 +87,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: thumama/nodeapp:${{ github.sha }}
+          tags: thumama610/nodeapp:${{ github.sha }}
           push: true
 
     
