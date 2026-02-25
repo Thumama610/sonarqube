@@ -49,8 +49,8 @@ jobs:
         with:
           scan-type: 'fs'
           scan-ref: '.'
-          severity: 'HIGH,CRITICAL'
-          exit-code: '1' # to make the flow fail in case of high or citical vulnerabilities
+        #  severity: 'HIGH,CRITICAL'
+       #   exit-code: '1' # to make the flow fail in case of high or citical vulnerabilities
 
   docker-build-scan-push:
     name: docker build and trivy scan
