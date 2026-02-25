@@ -1,0 +1,15 @@
+FROM node:25-alpine3.22
+
+WORKDIR /app/
+
+COPY package*.json .
+
+RUN npm install express
+
+COPY src src
+
+EXPOSE 3000
+
+ENTRYPOINT [ "npm" ]
+
+CMD [ "start" ]

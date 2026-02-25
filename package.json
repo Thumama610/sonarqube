@@ -1,0 +1,23 @@
+{
+  "name": "sonarqube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thumama610/sonarqube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thumama610/sonarqube/issues"
+  },
+  "homepage": "https://github.com/Thumama610/sonarqube#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
