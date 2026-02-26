@@ -4,7 +4,7 @@ WORKDIR /app/
 
 COPY package*.json .
 
-RUN npm install express
+RUN npm install express && npm install prom-client
 
 COPY src src
 
