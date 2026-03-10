@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app
+  labels:
+    app: node-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: node-app
+        image: nginx
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 3000
