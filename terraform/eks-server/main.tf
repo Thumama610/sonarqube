@@ -19,7 +19,7 @@ resource "aws_security_group" "eks-server-sg" {
   description = "Allow TLS inbound traffic"
 
   ingress = [
-    for port in [22, 80, 443, 8080, 9000, 3000] : {
+    for port in [22, 80, 443, 9000, 3000] : {
       description      = "inbound rules"
       from_port        = port
       to_port          = port
